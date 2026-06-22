@@ -1,0 +1,37 @@
+user:
+  admin: yes
+  name: Andrey
+  age: 21
+  position: System administrator
+  skills:
+    - name: GitLab CI/CD
+      level: 4
+      description: >
+        Умею работать с артефактами,
+        работать с needs,
+        работать с package и image registry
+    - name: Docker
+      level: 3
+      description: >
+        Умею работать с контейнерами,
+        писать dockerfile,
+        писать docker-compose-файлы
+    - name: Python
+      level: 4
+      description: >
+        Умею писать полезные скрипты и программы,
+        использовать шаблоны Jinja2,
+        работать с сетевым оборудованием посредством netmiko
+  address:
+    country: Russia
+    city: Moscow
+    street: Lenin's
+    building: 21
+    apartaments: 28
+  pets:
+    - name: Marsik
+      kind: cat
+      meow: yes
+    - name: Donka
+      kind: dog
+      meow: no
