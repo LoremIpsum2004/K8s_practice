@@ -28,9 +28,15 @@ spec:
           - containerPort: 15672  # Web-interface
         env:
           - name: RABBITMQ_DEFAULT_USER
-            value: lessons
+            valueFrom:
+              secretKeyRef:
+                name: conv-secrets
+                key: RABBITMQ_DEFAULT_USER
           - name: RABBITMQ_DEFAULT_PASS
-            value: lessons
+            valueFrom:
+              secretKeyRef:
+                name: conv-secrets
+                key: RABBITMQ_DEFAULT_PASS
         volumeMounts:
           - name: rmq-data
             mountPath: /var/lib/rabbitmq
