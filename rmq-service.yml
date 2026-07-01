@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rmq-clusterip
+spec:
+  type: ClusterIP
+  selector:
+    components: broker
+  ports:
+    - name: msg
+      port: 5672
+      protocol: TCP
+    - name: web
+      port: 15672
+      protocol: TCP
